@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>❤YX&MYB❤</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <p class="text2" style="color: #ff8e8e;">
+    ❤以欢喜之心，慢度日常❤
+    <br/>
+</p>
+  <div id="container">
+    <div class="wrap">
+      <a href="img/1.jpg" ><img src="img/1.jpg" alt=""></a>
+      <a href="img/2.jpg" ><img src="img/2.jpg" alt=""></a>
+      <a href="img/3.jpg" ><img src="img/3.jpg" alt=""></a>
+      <a href="img/4.jpg" ><img src="img/4.jpg" alt=""></a>
+      <a href="img/5.jpg" ><img src="img/5.jpg" alt=""></a>
+      <a href="img/6.jpg" ><img src="img/6.jpg" alt=""></a>
+      <a href="img/7.jpg" ><img src="img/7.jpg" alt=""></a>
+      <a href="img/8.jpg" ><img src="img/8.jpg" alt=""></a>
+      <a href="img/9.jpg" ><img src="img/9.jpg" alt=""></a>
+      <a href="img/10.jpg" ><img src="img/10.jpg" alt=""></a>
+      <a href="img/11.jpg" ><img src="img/11.jpg" alt=""></a>
+      <a href="img/12.jpg" ><img src="img/12.jpg" alt=""></a>
+      <a href="img/13.jpg" ><img src="img/13.jpg" alt=""></a>
+      <a href="img/14.jpg" ><img src="img/14.jpg" alt=""></a>
+      <a href="img/15.jpg" ><img src="img/15.jpg" alt=""></a>
+      <a href="img/16.jpg" ><img src="img/16.jpg" alt=""></a>
+      <a href="img/17.jpg" ><img src="img/17.jpg" alt=""></a>
+      <a href="img/18.jpg" ><img src="img/18.jpg" alt=""></a>
+
+
+    </div>
+  </div>
+  <p class="text" style="color: #ff8e8e;">
+    我们在一起
+    <br/>
+    <span id="span_dt_dt"></span>
+</p>
+<script language="javascript">
+  function show_date_time() {
+      window.setTimeout("show_date_time()", 1000);
+  //你俩在一起的那天
+      BirthDay = new Date("07/26/2024 01:00:00");
+      today = new Date();
+      timeold = (today.getTime() - BirthDay.getTime());
+      sectimeold = timeold / 1000
+      secondsold = Math.floor(sectimeold);
+      msPerDay = 24 * 60 * 60 * 1000
+      e_daysold = timeold / msPerDay
+      daysold = Math.floor(e_daysold);
+      e_hrsold = (e_daysold - daysold) * 24;
+      hrsold = Math.floor(e_hrsold);
+      e_minsold = (e_hrsold - hrsold) * 60;
+      minsold = Math.floor((e_hrsold - hrsold) * 60);
+      seconds = Math.floor((e_minsold - minsold) * 60);
+      span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+  }
+  show_date_time();
+</script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript">
+    var container = document.getElementById('container')
+    photo3D(container, {
+      isAutoPlay: true, // 是否自动轮播
+      interTime: 3500, // 轮播时间,单位:ms
+      rotateX: -20, // 初始沿x轴翻转角度,单位:deg
+      rotateY: 0 // 初始沿y轴翻转角度,单位:deg
+    })
+  </script>
+</body>
+</html>
